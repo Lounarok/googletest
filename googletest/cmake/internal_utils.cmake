@@ -28,7 +28,7 @@ macro(fix_default_compiler_settings_)
              CMAKE_CXX_FLAGS CMAKE_CXX_FLAGS_DEBUG CMAKE_CXX_FLAGS_RELEASE
              CMAKE_CXX_FLAGS_MINSIZEREL CMAKE_CXX_FLAGS_RELWITHDEBINFO)
       if (NOT BUILD_SHARED_LIBS AND NOT gtest_force_shared_crt AND NOT MSVC_RUNTIME_LIBRARY)
-        # Following behavior should be only applicable before CMP0091:
+        # Following behavior should be only applicable before CMP0091 enabled:
         # When Google Test is built as a shared library, it should also use
         # shared runtime libraries. Otherwise, it may end up with multiple
         # copies of runtime library data in different modules, resulting in
